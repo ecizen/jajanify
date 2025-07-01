@@ -8,6 +8,7 @@ import RattingSection from "@/components/organisms/ratting-section";
 import TestimonialSection from "@/components/organisms/testiominal-section";
 import TravelPromoCard from "@/components/organisms/travel-promo-section";
 import Image from "next/image";
+import BottomNav from "../components/molecules/bottom-nav";
 
 // import CategorySection from "../components/organisms/category-section";
 // import PromoSection from "../components/molecules/promo";
@@ -46,6 +47,7 @@ export default function Home() {
       </section>
       </main>
       <TravelFooter/>
+      <BottomNav/>
     </>
   );
 }
