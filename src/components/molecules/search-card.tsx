@@ -4,7 +4,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { format } from "date-fns";
 import { CalendarIcon, Search, Users } from "lucide-react";
 
@@ -63,7 +67,9 @@ export default function TravelSearchTabs() {
                       className="w-full justify-start text-left font-normal bg-white text-black border border-gray-300 rounded-md shadow-sm hover:shadow-md focus:ring-2 focus:ring-blue-500 transition"
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {checkInDate ? format(checkInDate, "dd MMMM yyyy") : "Select date"}
+                      {checkInDate
+                        ? format(checkInDate, "dd MMMM yyyy")
+                        : "Select date"}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white shadow-lg rounded-md">
@@ -89,7 +95,9 @@ export default function TravelSearchTabs() {
                       className="w-full justify-start text-left font-normal bg-white text-black border border-gray-300 rounded-md shadow-sm hover:shadow-md focus:ring-2 focus:ring-blue-500 transition"
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
-                      {checkOutDate ? format(checkOutDate, "dd MMMM yyyy") : "Select date"}
+                      {checkOutDate
+                        ? format(checkOutDate, "dd MMMM yyyy")
+                        : "Select date"}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto p-0 bg-white shadow-lg rounded-md">

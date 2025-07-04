@@ -7,6 +7,7 @@ import type { StaticImageData } from "next/image";
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 type filteredData = {
     id: number;
@@ -25,9 +26,7 @@ type TravelData ={
 const CardCategory: React.FC<TravelData> = ({travel}) => {
   const route =useRouter()
 
-  const handle =() => {
-    route.push('/detail-travel')
-  }
+
   return (
     <Swiper
       spaceBetween={20}
@@ -49,8 +48,9 @@ const CardCategory: React.FC<TravelData> = ({travel}) => {
     >
       {travel && travel.map((item: filteredData) => (
 
-          <SwiperSlide key={item.id}>
-          <div onClick={handle} className="bg-white rounded-lg shadow  relative flex justify-center  w-full h-[260px]">
+        <SwiperSlide key={item.id}>
+            <a href="/detail-travel">
+          <div  className="bg-white rounded-lg shadow  relative flex justify-center  w-full h-[260px]">
             <div className='absolute max-w-[90%] rounded-xl w-full bg-white/30 backdrop-blur-sm  bottom-3 p-2 px-4 flex items-center justify-between'>
                 <div>
                     <h3 className="mt-2 text-sm font-semibold line-clamp-1 text-white">{item.name}</h3>
@@ -71,6 +71,7 @@ const CardCategory: React.FC<TravelData> = ({travel}) => {
               className="rounded-lg object-cover aspect-square"
               />
           </div>
+          </a>  
         </SwiperSlide>
       ))}
     </Swiper>

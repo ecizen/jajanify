@@ -17,9 +17,9 @@ export default function BottomNav() {
   };
 
   const dataNav = [
-    { id: 1, icon: Home01Icon, label: "Home", link: "#" },
+    { id: 1, icon: Home01Icon, label: "Home", link: "/" },
     { id: 2, icon: FavouriteIcon, label: "Favorite", link: "#" },
-    { id: 3, icon: Search01Icon, label: "Search", link: "#" },
+    { id: 3, icon: Search01Icon, label: "Search", link: "/" },
     { id: 4, icon: Appointment01Icon, label: "Appointment", link: "#" },
     { id: 5, icon: UserIcon, label: "Profile", link: "/profile" }
   ];
